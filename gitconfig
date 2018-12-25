@@ -1,0 +1,17 @@
+[alias]
+	unc = reset --soft HEAD^
+	uns = reset
+[color]
+	ui = auto
+[push]
+	default = upstream
+[fetch]
+	prune = true
+[user]
+	name = Chris Fung
+	email = aergonaut@gmail.com
+	signkey = E89B5EC467AC51D8
+[credential]
+	helper = osxkeychain
+[commit]
+	gpgsign = true
