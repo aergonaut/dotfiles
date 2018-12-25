@@ -1,8 +1,13 @@
 [alias]
+	pf = push --force-with-lease
+	rc = rebase --continue
 	unc = reset --soft HEAD^
 	uns = reset
 [color]
 	ui = auto
+[core]
+	excludesfile = ~/.gitignore
+	autocrlf = input
 [push]
 	default = upstream
 [fetch]
