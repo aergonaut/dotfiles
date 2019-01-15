@@ -20,3 +20,37 @@ _fuzzy_history() {
 zle -N fuzzy-history _fuzzy_history
 bindkey '^r' fuzzy-history
 
+# Git branches
+_fuzzy_git_branches() {
+  zle -U "$(
+    git branch --color=always | \
+    grep -v '^* ' | \
+    fzf-tmux --reverse --ansi --tac --select-1 | \
+    sed -E 's/^[ \t]*//'
+  )"
+}
+zle -N fuzzy-git-branches _fuzzy_git_branches
+bindkey '^g^g' fuzzy-git-branches
+
+# Git files
+_fuzzy_git_status_files() {
+  zle -U "$(
+    git -c color.status=always status --short | \
+    fzf-tmux --ansi --reverse --no-sort | \
+    cut -d ' ' -f 3
+  )"
+}
+zle -N fuzzy-git-status-files _fuzzy_git_status_files
+bindkey '^g^f' fuzzy-git-status-files
+
+# Git files
+_fuzzy_git_shalector() {
+  commit=$(
+    git log --color=always --oneline --decorate --all -35 | \
+    fzf-tmux --ansi --reverse --no-sort
+  )
+  zle -U "$(echo $commit | cut -d ' ' -f 1)"
+  zle -M "$commit"
+}
+zle -N fuzzy-git-shalector _fuzzy_git_shalector
+bindkey '^g^s' fuzzy-git-shalector
