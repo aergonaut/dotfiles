@@ -6,6 +6,7 @@ source $ZPLUG_HOME/init.zsh
 zplug 'mafredri/zsh-async', from:github
 zplug 'sindresorhus/pure', use:pure.zsh, from:github, as:theme
 zplug "plugins/git", from:oh-my-zsh
+zplug 'plugins/bundler', from:oh-my-zsh
 zplug 'zsh-users/zsh-syntax-highlighting', defer:3
 zplug 'zsh-users/zsh-completions', defer:3
 
@@ -55,8 +56,8 @@ if [ -f '/Users/chris/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/chri
 if [ -f '/Users/chris/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/chris/google-cloud-sdk/completion.zsh.inc'; fi
 
 # nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
@@ -66,3 +67,8 @@ export NVM_DIR="$HOME/.nvm"
 [[ -f /Users/chris/.nvm/versions/node/v10.7.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/chris/.nvm/versions/node/v10.7.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export NOTION_HOME="$HOME/.notion"
+[ -s "$NOTION_HOME/load.sh" ] && \. "$NOTION_HOME/load.sh"
+
+export PATH="${NOTION_HOME}/bin:$PATH"
