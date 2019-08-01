@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# Install Ruby using ruby-install into rbenv's directories
+
+ruby-install --install-dir "~/.rbenv/versions/$1" "$1"
