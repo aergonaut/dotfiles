@@ -68,11 +68,13 @@ if [ -f '/Users/chris/google-cloud-sdk/completion.zsh.inc' ]; then source '/User
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export NOTION_HOME="$HOME/.notion"
-[ -s "$NOTION_HOME/load.sh" ] && \. "$NOTION_HOME/load.sh"
+#export NOTION_HOME="$HOME/.notion"
+#[ -s "$NOTION_HOME/load.sh" ] && \. "$NOTION_HOME/load.sh"
 
-export PATH="${NOTION_HOME}/bin:$PATH"
-export VOLTA_HOME="$HOME/.volta"
-[ -s "$VOLTA_HOME/load.sh" ] && . "$VOLTA_HOME/load.sh"
+#export PATH="${NOTION_HOME}/bin:$PATH"
+#export VOLTA_HOME="$HOME/.volta"
+#[ -s "$VOLTA_HOME/load.sh" ] && . "$VOLTA_HOME/load.sh"
 
-export PATH="$VOLTA_HOME/bin:$PATH"
+#export PATH="$VOLTA_HOME/bin:$PATH"
+
+eval "$(nodenv init -)"
