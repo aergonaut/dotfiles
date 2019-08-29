@@ -43,8 +43,6 @@ for zshconfig in $HOME/.zsh/config/*.zsh; do
   source $zshconfig
 done
 
-ensure_tmux_is_running
-
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 # added by travis gem
 [ -f /Users/chris/.travis/travis.sh ] && source /Users/chris/.travis/travis.sh
