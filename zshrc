@@ -1,6 +1,8 @@
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
+UNBUNDLED_COMMANDS=(irb)
+
 # zplug
 
 zplug 'mafredri/zsh-async', from:github
@@ -29,13 +31,13 @@ alias cdddd="cd ../../.."
 
 alias git=hub
 
+export EDITOR=nvim
 export PATH="$HOME/bin:$PATH"
 
 # Load rbenv
 eval "$(rbenv init -)"
 
 # Necessary for GPG signing Git commits
-
 GPG_TTY=$(tty)
 export GPG_TTY
 
@@ -44,6 +46,7 @@ for zshconfig in $HOME/.zsh/config/*.zsh; do
 done
 
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+
 # added by travis gem
 [ -f /Users/chris/.travis/travis.sh ] && source /Users/chris/.travis/travis.sh
 
@@ -53,10 +56,6 @@ if [ -f '/Users/chris/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/chri
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/chris/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/chris/google-cloud-sdk/completion.zsh.inc'; fi
 
-# nvm
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [[ -f /Users/chris/.nvm/versions/node/v10.7.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/chris/.nvm/versions/node/v10.7.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
@@ -65,14 +64,5 @@ if [ -f '/Users/chris/google-cloud-sdk/completion.zsh.inc' ]; then source '/User
 [[ -f /Users/chris/.nvm/versions/node/v10.7.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/chris/.nvm/versions/node/v10.7.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-#export NOTION_HOME="$HOME/.notion"
-#[ -s "$NOTION_HOME/load.sh" ] && \. "$NOTION_HOME/load.sh"
-
-#export PATH="${NOTION_HOME}/bin:$PATH"
-#export VOLTA_HOME="$HOME/.volta"
-#[ -s "$VOLTA_HOME/load.sh" ] && . "$VOLTA_HOME/load.sh"
-
-#export PATH="$VOLTA_HOME/bin:$PATH"
 
 eval "$(nodenv init -)"
