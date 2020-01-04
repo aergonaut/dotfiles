@@ -6,7 +6,7 @@ UNBUNDLED_COMMANDS=(irb)
 # zplug
 
 zplug 'mafredri/zsh-async', from:github
-zplug 'sindresorhus/pure', use:pure.zsh, from:github, as:theme
+#zplug 'sindresorhus/pure', use:pure.zsh, from:github, as:theme
 zplug "plugins/git", from:oh-my-zsh
 zplug 'plugins/bundler', from:oh-my-zsh
 zplug 'zsh-users/zsh-syntax-highlighting', defer:3
@@ -21,6 +21,9 @@ if ! zplug check --verbose; then
 fi
 
 zplug load
+
+# Starship prompt
+eval "$(starship init zsh)"
 
 # Aliases
 
