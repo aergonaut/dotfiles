@@ -1,0 +1,17 @@
+# Starship config file
+# https://starship.rs/config/
+
+[git_branch]
+symbol = ""
+
+[package]
+disabled = true
+
+[ruby]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[rust]
+disabled = true
