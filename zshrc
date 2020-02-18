@@ -32,7 +32,7 @@ alias cdd="cd .."
 alias cddd="cd ../.."
 alias cdddd="cd ../../.."
 
-alias git=hub
+# alias git=hub
 
 export EDITOR=nvim
 export PATH="$HOME/bin:$PATH"
