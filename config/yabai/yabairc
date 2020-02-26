@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+yabai -m config layout bsp
+
+yabai -m rule --add app="^System Preferences$" manage=off
+yabai -m rule --add app="^Tweetbot" manage=off
