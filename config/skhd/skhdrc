@@ -2,10 +2,10 @@
 meh - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~
 
 # Move windows around on the current desktop
-meh - h : yabai -m window --warp east
-meh - j : yabai -m window --warp south
-meh - k : yabai -m window --warp north
-meh - l : yabai -m window --warp west
+meh - h : yabai -m window --swap east
+meh - j : yabai -m window --swap south
+meh - k : yabai -m window --swap north
+meh - l : yabai -m window --swap west
 
 # Focus window in the given direction
 shift + alt - h : yabai -m window --focus east
