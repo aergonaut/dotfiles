@@ -1,17 +1,18 @@
 # Open kitty
 meh - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~
+hyper - return : /Applications/Firefox.app/Contents/MacOS/firefox
 
 # Move windows around on the current desktop
-meh - h : yabai -m window --swap east
+meh - h : yabai -m window --swap west
 meh - j : yabai -m window --swap south
 meh - k : yabai -m window --swap north
-meh - l : yabai -m window --swap west
+meh - l : yabai -m window --swap east
 
 # Focus window in the given direction
-shift + alt - h : yabai -m window --focus east
+shift + alt - h : yabai -m window --focus west
 shift + alt - j : yabai -m window --focus south
 shift + alt - k : yabai -m window --focus north
-shift + alt - l : yabai -m window --focus west
+shift + alt - l : yabai -m window --focus east
 
 # Throw windows to next or previous space
 hyper - h : yabai -m window --space prev
