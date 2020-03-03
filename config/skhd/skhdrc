@@ -17,3 +17,7 @@ shift + alt - l : yabai -m window --focus east
 # Throw windows to next or previous space
 hyper - h : yabai -m window --space prev
 hyper - l : yabai -m window --space next
+
+# float / unfloat window and center on screen
+alt - t : yabai -m window --toggle float;\
+          yabai -m window --grid 9:9:1:1:7:7
