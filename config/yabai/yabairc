@@ -2,13 +2,13 @@
 
 yabai -m config layout bsp
 
-yabai -m config top_padding 20
+yabai -m config top_padding 45
 yabai -m config bottom_padding 20
 yabai -m config left_padding 20
 yabai -m config right_padding 20
 yabai -m config window_gap 20
 
-yabai -m config window_border on
+yabai -m config window_border off
 yabai -m config window_border_width 4
 yabai -m config window_border_radius -1.0
 yabai -m config active_window_border_color 0xffa463f2
