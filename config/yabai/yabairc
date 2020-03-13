@@ -15,3 +15,4 @@ yabai -m config active_window_border_color 0xffa463f2
 
 yabai -m rule --add app="^System Preferences$" manage=off
 yabai -m rule --add app="^Tweetbot" manage=off
+yabai -m rule --add app="^Aviatrix" manage=off
