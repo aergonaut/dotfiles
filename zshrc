@@ -37,13 +37,8 @@ alias cdddd="cd ../../.."
 export EDITOR=nvim
 export PATH="$HOME/bin:$PATH"
 
-# Load rbenv
-# eval "$(rbenv init -)"
-
 # Load chruby
 source /usr/local/opt/chruby/share/chruby/chruby.sh
-# Add rbenv versions directory to chruby
-RUBIES+=(~/.rbenv/versions/*)
 # Enable chruby auto-switching
 source /usr/local/opt/chruby/share/chruby/auto.sh
 
