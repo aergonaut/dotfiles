@@ -11,6 +11,7 @@ zplug "plugins/git", from:oh-my-zsh
 zplug 'plugins/bundler', from:oh-my-zsh
 zplug 'zsh-users/zsh-syntax-highlighting', defer:3
 zplug 'zsh-users/zsh-completions', defer:3
+zplug 'zsh-users/zsh-autosuggestions', defer:3
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -71,3 +72,8 @@ if [ -f '/Users/chris/google-cloud-sdk/completion.zsh.inc' ]; then source '/User
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval "$(nodenv init -)"
+
+eval "$(shadowenv init zsh)"
+
+# bind ctrl-b to accept zsh-autosuggestion
+bindkey '^B' autosuggest-accept
