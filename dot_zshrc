@@ -60,6 +60,9 @@ setopt PROMPT_SP
 
 unsetopt MULTIOS
 
+# Use emacs keybinds (e.g. alt-backspace = kill previous word)
+bindkey -e
+
 
 alias ls="ls --color=auto -F";
 alias lla="ls -laF --color=auto";
