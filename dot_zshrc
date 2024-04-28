@@ -87,3 +87,6 @@ eval "$(nodenv init -)"
 
 # activate direnv
 eval "$(direnv hook zsh)"
+
+# activate atuin
+eval "$(atuin init zsh)"
