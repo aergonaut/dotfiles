@@ -2,7 +2,7 @@ source ~/.zplug/init.zsh
 
 zplug "zplug/zplug", hook-build:"zplug --self-manage"
 
-zplug "modules/git", from:prezto
+zplug "plugins/git", from:oh-my-zsh
 
 zplug "mafredri/zsh-async", from:github
 zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
@@ -71,6 +71,11 @@ alias u="cd ..";
 alias uu="cd ../..";
 alias uuu="cd ../../..";
 
+alias cz=chezmoi
+
+# Exports
+export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
+
 # Load local configs. (N) enables null_glob qualifier, returns empty with no matches
 for config in $HOME/.config/zsh/zshrc.d/*.zsh(N); do
     source $config
@@ -80,7 +85,7 @@ source $HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh
 source $HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh
 
 # activate asdf
-source $HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh
+# source $HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh
 
 # activate nodenv
 eval "$(nodenv init -)"
